@@ -1,0 +1,8 @@
+.box-info-products {
+  border-width: 2px;
+  border-color: #777;
+  border-right-style: solid;
+}
+.navbar .btn-circle {
+  border-radius: 25px;
+}
