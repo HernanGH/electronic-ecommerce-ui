@@ -2,13 +2,13 @@ import React from 'react';
 import Reflux from 'reflux';
 import AppStore from '../../AppStore';
 import AppActions from '../../AppActions';
-import './NavBar.css';
-class NavBar extends Reflux.Component {
+class Footer extends Reflux.Component {
     constructor (props) {
         super(props);
         this.state = {
             sortBy: '',
             total: 32,
+            skip: 16
         };
         this.store = AppStore;
     }
@@ -38,20 +38,17 @@ class NavBar extends Reflux.Component {
     }
     render () {
         return (
-          <div className="navbar">
-            <div className="col-md-2 box-info-products">
-              <h4>{ this.state.skip ? this.state.skip + 16 : 16} of {this.state.productList ? this.state.productList.length : 0} products</h4>
+          <div className="row navbar">
+            <div className="col-md-3">
+              <h4>{this.state.skip} of {this.state.total} products</h4>
             </div>
-            <div className="col-md-6">
-                <h4>Sort By: Most Recent Lowest Price Highest Price  </h4>
-            </div>
-            <div className="col-md-2 col-md-offset-2">
-                {this._renderPrevious()}
-                {this._renderNext()}
+            <div className="col-md-3 col-md-offset-6">
+              {this._renderPrevious()}
+              {this._renderNext()}
             </div>
           </div>
         );
     }
 }
 
-export default NavBar;
+export default Footer;
