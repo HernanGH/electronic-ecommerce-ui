@@ -43,7 +43,12 @@ class NavBar extends Reflux.Component {
               <h4>{ this.state.skip ? this.state.skip + 16 : 16} of {this.state.productList ? this.state.productList.length : 0} products</h4>
             </div>
             <div className="col-md-6">
-                <h4>Sort By: Most Recent Lowest Price Highest Price  </h4>
+                <h3>
+                Sort By:
+                <span class="badge chips">Most Recent</span>
+                <span class="badge chips">Lowest Price</span>
+                <span class="badge chips">Highest Price  </span>
+                </h3>
             </div>
             <div className="col-md-2 col-md-offset-2">
                 {this._renderPrevious()}

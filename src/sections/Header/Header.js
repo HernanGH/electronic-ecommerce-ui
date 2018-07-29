@@ -22,8 +22,8 @@ class Header extends Reflux.Component {
             <div className='header'>
               <div className="col-md-3 col-md-offset-9 user-info">
                 <h3>
-                  {this.state.userData.name} {this.state.userData.points}
-                    <img src='/coin.svg' />
+                  {this.state.userData.name}
+                  <span class="badge chips"> {this.state.userData.points} <img src='/coin.svg' /> </span>
                 </h3>
               </div>
             </div>

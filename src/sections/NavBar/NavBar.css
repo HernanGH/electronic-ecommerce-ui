@@ -1,11 +1,19 @@
 .box-info-products {
-  border-width: 2px;
-  border-color: #777;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.35);
   border-right-style: solid;
+  h4  {
+    padding-top: 12px;
+  }
 }
 .navbar .btn-circle {
   border-radius: 25px;
 }
 .btn-box {
   height: 13px;
+}
+.container .navbar {
+  margin-top: 35px;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgba(128, 128, 128, 0.35);
 }
