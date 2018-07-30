@@ -24,7 +24,7 @@ class NavBar extends Reflux.Component {
         var hidden = this.state.skip === 0;
         return (
           <a onClick={this.previous} className={hidden ? 'invisible' : ''}>
-            <img src='/arrow-left.svg' />
+            <img alt='previous' src='/arrow-left.svg' />
           </a>
         );
     }
@@ -32,7 +32,7 @@ class NavBar extends Reflux.Component {
         var hidden = this.state.skip && this.state.productList && this.state.skip + 16 === this.state.productList.length;
         return (
           <a onClick={this.next} className={hidden ? 'invisible' : ''}>
-            <img src='/arrow-right.svg' />
+            <img alt='next' src='/arrow-right.svg' />
           </a>
         );
     }
