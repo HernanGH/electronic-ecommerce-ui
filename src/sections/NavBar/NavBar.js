@@ -7,7 +7,7 @@ class NavBar extends Reflux.Component {
     constructor (props) {
         super(props);
         this.state = {
-            sortBy: '',
+            sortBy: 'recent',
             total: 32,
         };
         this.store = AppStore;
@@ -36,6 +36,10 @@ class NavBar extends Reflux.Component {
           </a>
         );
     }
+    sortBy(filter) {
+      this.setState({sortBy: filter});
+      AppActions.sortBy(filter);
+    }
     render () {
         return (
           <div className="navbar">
@@ -45,9 +49,9 @@ class NavBar extends Reflux.Component {
             <div className="col-md-6">
                 <h3>
                 Sort By:
-                <span class="badge chips">Most Recent</span>
-                <span class="badge chips">Lowest Price</span>
-                <span class="badge chips">Highest Price  </span>
+                <span onClick={() => this.sortBy('recent')} className={`badge chips ${this.state.sortBy === 'recent' ? 'active' : ''}`}>Most Recent</span>
+                <span onClick={() => this.sortBy('lowest')} className={`badge chips ${this.state.sortBy === 'lowest' ? 'active' : ''}`}>Lowest Price</span>
+                <span onClick={() => this.sortBy('highest')} className={`badge chips ${this.state.sortBy === 'highest' ? 'active' : ''}`}>Highest Price  </span>
                 </h3>
             </div>
             <div className="col-md-2 col-md-offset-2">

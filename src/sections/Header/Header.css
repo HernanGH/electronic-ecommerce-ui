@@ -4,8 +4,16 @@
 }
 
 .header {
-  z-index: 10;
+  z-index: 15;
   width: 100%;
   background-color: #f9f9f9;
   position: fixed;
+}
+.title {
+    position: relative;
+    top: -150px;
+    left: 125px;
+    height: 0px;
+    color: white;
+    font-size: 80px;
 }

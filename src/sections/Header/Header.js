@@ -5,17 +5,11 @@ import './Header.css';
 class Header extends Reflux.Component {
     constructor (props) {
         super(props);
-        this.state = {
-            username: 'John Kite'
-        };
+        this.state = {};
         this.store = AppStore;
     }
     componentDidMount () {
-        setTimeout(() => {
-          console.log('[STATE]: ', this.state);
-        }, 4000);
     }
-
     render () {
         return (
           <div>
@@ -23,12 +17,13 @@ class Header extends Reflux.Component {
               <div className="col-md-3 col-md-offset-9 user-info">
                 <h3>
                   {this.state.userData.name}
-                  <span class="badge chips"> {this.state.userData.points} <img src='/coin.svg' /> </span>
+                  <span className="badge chips"> {this.state.userData.points} <img src='/coin.svg' /> </span>
                 </h3>
               </div>
             </div>
             <div className='row'>
               <img className='slide' src='/header-x1.png' />
+              <p className='title'>Electronic</p>
             </div>
           </div>
         );

@@ -38,9 +38,9 @@ class Footer extends Reflux.Component {
     }
     render () {
         return (
-          <div className="row navbar">
+          <div className="row navbar footer">
             <div className="col-md-3">
-              <h4>{this.state.skip} of {this.state.total} products</h4>
+              <h4>{this.state.skip + 16} of {this.state.total} products</h4>
             </div>
             <div className="col-md-3 col-md-offset-6">
               {this._renderPrevious()}

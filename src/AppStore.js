@@ -37,4 +37,17 @@ export default class AppStore extends Reflux.Store {
           this.setState({skip: this.state.skip + 16});
       }
     }
+    onSortBy(filter) {
+      this.state.productList.sort((current, next) => {
+          var firsts = current;
+          var lasts = next;
+          if (filter === 'highest') {
+              var firsts = next;
+              var lasts = current;
+          }
+          return firsts.cost - lasts.cost;
+      });
+      this.setState({productList: this.state.productList});
+
+    }
 }

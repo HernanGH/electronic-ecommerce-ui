@@ -3,7 +3,7 @@
   border-color: rgba(128, 128, 128, 0.35);
   border-right-style: solid;
   h4  {
-    padding-top: 12px;
+    margin-top: 24px;
   }
 }
 .navbar .btn-circle {
@@ -16,4 +16,11 @@
   margin-top: 35px;
   border-width: 0px 0px 1px 0px;
   border-color: rgba(128, 128, 128, 0.35);
+}
+.navbar .active {
+  color: white;
+  background-color: #66dcfe;
+}
+h3 span {
+  cursor: pointer;
 }

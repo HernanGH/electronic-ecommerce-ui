@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 
 var AppActions = Reflux.createActions([
-    'getUser', 'getProducts', 'previous', 'next'
+    'getUser', 'getProducts', 'previous', 'next', 'sortBy'
 ]);
 
 export default AppActions;
