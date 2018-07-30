@@ -2,10 +2,12 @@
   border-width: 1px;
   border-color: rgba(128, 128, 128, 0.35);
   border-right-style: solid;
-  h4  {
-    margin-top: 24px;
-  }
 }
+
+.box-info-products h4 {
+    margin-top: 24px;
+}
+
 .navbar .btn-circle {
   border-radius: 25px;
 }
@@ -23,4 +25,13 @@
 }
 h3 span {
   cursor: pointer;
+}
+
+h3 span:hover {
+    color: white;
+    background-color: rgba(97, 210, 248, 0.5);
+}
+
+h4 {
+  margin-top: 25px;
 }

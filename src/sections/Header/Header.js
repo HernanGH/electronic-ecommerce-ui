@@ -12,8 +12,8 @@ class Header extends Reflux.Component {
     }
     _showNotification() {
         if (this.state.reedemSuccess) {
-          return (<div className="col-md-3 alert alert-info" role="alert">
-          Redeem Success
+          return (<div className="col-md-3 alert alert-info text-center" role="alert">
+              <a>Redeem Success</a>
           </div>);
         }
         return (<div className='col-md-3'></div>);
